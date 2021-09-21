@@ -29,7 +29,7 @@ A prompt menu will display when the app is initiated. The user can add departmen
 4. console.table
 
 # Demo Video for Application
-[Deployed Demo]()
+[Deployed Demo](https://drive.google.com/file/d/11n6N8Dg_d5m2WnVAefNqp8XAfk_IeR0o/view)
 
 # Screenshot of Demo
 <img width="484" alt="Screen Shot 2021-09-20 at 12 25 02 AM" src="https://user-images.githubusercontent.com/85428896/133957377-45c8926f-2a30-42c9-bc6b-9b6353e803f4.png">
