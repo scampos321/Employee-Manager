@@ -133,7 +133,8 @@ const deleteDepartment = () => {
             choices: res.map(department => {
                 return { name: `${department.name}` ,
             value: department.id }
-            }).then(answer => {
+            })
+            }]).then(answer => {
                 const queryii = 'DELETE FROM department WHERE ?'
                 db.query(queryii, [{ id:answer.selectDepartment}], (err, res) => {
                     if (err) throw err;
@@ -142,8 +143,7 @@ const deleteDepartment = () => {
                     init();
                 })
             })
-        }])
-    })
+        })
 }
 
 const deleteRole = () => {
@@ -180,7 +180,8 @@ const deleteEmployee = () => {
             choices: res.map(employee => {
                 return { name: `${employee.title}` ,
             value: role.id }
-            }).then(answer => {
+            })
+            }]).then(answer => {
                 const queryii = 'DELETE FROM employees WHERE ?'
                 db.query(queryii, [{ id:answer.selectEmployee}], (err, res) => {
                     if (err) throw err;
@@ -189,7 +190,7 @@ const deleteEmployee = () => {
                     init();
                 })
             })
-        }])
+
     })
 }
 
