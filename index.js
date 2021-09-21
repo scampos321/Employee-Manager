@@ -177,13 +177,12 @@ const deleteEmployee = () => {
             type: "list",
             name: "selectEmployee",
             message: "Select a employee to remove",
-            choices: res.map(employee => {
-                return { name: `${employee.title}` ,
-            value: role.id }
+            choices: res.map(employees => {
+                return { name: `${employees.first_name} ${employees.last_name}`, value: employees.id }
             })
             }]).then(answer => {
                 const queryii = 'DELETE FROM employees WHERE ?'
-                db.query(queryii, [{ id:answer.selectEmployee}], (err, res) => {
+                db.query(queryii, [{ id: answer.selectEmployee }], (err, res) => {
                     if (err) throw err;
                     console.log("Employee has been removed");
                     employeeList();
@@ -233,7 +232,7 @@ const init = () => {
             deleteDepartment();
         } else if (answer.select === "Remove a role from database"){
             deleteRole();
-        } else if (answer.select === "Remove a employee from database"){
+        } else if (answer.select === "Remove an employee from database"){
             deleteEmployee();
         } else if (answer.select === "Quit application"){
             quitApp();
